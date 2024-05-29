@@ -1,0 +1,563 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #1a1919;
+    color: white;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.toggle {
+    display: flex;
+}
+
+header ul li a:hover {
+    color: yellow;
+}
+
+.theme-toggler {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggler input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.hero {
+    background: url("https://s3-alpha-sig.figma.com/img/da60/13c4/72fea9683c20c6e146e321e57cb05989?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BxYF15EuCHr1PhaqUGXBsvB~fQVTxfjmMzASpUCKBIQaxZ9WIDplVCtfNwbCWdLyQXXGH-ooz4N9rN-9oPqf~HU8yqL-t~7sbfbrjDe25cFMcIJdselTkWjMMOhfVxcxetv-N~S2FVCB~FoOsDO1whx4VuX90es5rUQemm0in8zhXil8hONFDKYP8XhHM~3Rg57IbbaoLongJ5C4rXpdFeh0WAS8vWpR6twYHtBDp3-qeMF97Tf3xmntg6jK5kLelOVt64NQmYI-D3Wl0NbbZBvC43l1AHN8i-QnvOSoSmw3rrxyYQr7T7Z5jTaCcQEfhWlscAVhJtvgdJTP~-WqDA__");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-repeat: repeat;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+    align-items: left;
+    text-align: left; 
+    justify-content: center;
+    margin-left: 10px; 
+    width: 90%;
+}
+.hero-content .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px; 
+    width: 50%;
+}
+.hero-content .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 20px; 
+    box-sizing: border-box; 
+   
+}
+.hero-right form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.hero-right form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.hero-right form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hero-content .hero-left h1{
+font-size: 66px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(227, 227, 57);
+/* margin-right: 0px; */
+}
+.hero-content .hero-left p{
+    line-break: auto;
+    line-height: 22px;
+    margin-left: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: left; */
+    align-self: baseline;
+    margin-left: 6.5vw;
+
+}
+.icon,.icon2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.icon::after{
+    content: "";
+    width: 1px;
+    height: 25px;
+    color: white;
+    border: 1px solid;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.about {
+    padding: 40px 20px;
+    text-align: center;
+}
+.msg{
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.moreInfo{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: left;
+    margin-left: 10px;
+}
+.moreInfo ul{
+    display: flex;
+    flex-direction: column;
+
+}
+#countdown {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #555;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body.dark-mode #countdown{
+    color: #e3e02b;
+}
+
+.speakers,
+.testimonials {
+    padding: 50px;
+    background: #f8f9fa;
+}
+body.dark-mode .testimonials{
+    background-color: #1a1919;
+    color: white;
+}
+body.dark-mode .testimonial{
+    background-color: #555;
+    color: white;
+}
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    height: 45vh;
+    /* justify-content: center; */
+    margin: auto;
+    align-items: center;
+}
+
+.speaker-card {
+    min-width:100% ;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 40vh;
+   
+}
+.speaker-card img{
+    width: 99px;
+    height: 99px;
+border:1px solid;
+border-radius: 50%;
+margin-top: 10px;
+}
+.testimonial {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .speakers{
+    background-color: #1a1919;
+    color: white;
+}
+body.dark-mode .speaker-card{
+    background-color: #555;
+    color: #f8f9fa ;
+}
+.speaker h3 {
+    margin-bottom: 10px;
+}
+
+.speaker p {
+    font-size: 0.9em;
+}
+
+/* Schedule section */
+.schedule {
+    text-align: center;
+    padding-bottom:35px;
+    padding-top: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.schedule .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.schedule .btn:hover {
+    background-color: #0056b3;
+}
+
+.schedule-content {
+    margin-top: 20px;
+    display: none;
+}
+
+.schedule-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-content li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-content li strong {
+    color: #007bff;
+}
+
+.schedule-content li:hover {
+    background-color: #f1f1f1;
+}
+
+.dark-mode .schedule {
+    background-color: #333;
+    color: #f7f5f2;
+}
+.dark-mode .schedule h2{
+    color: #f7f5f2;
+}
+.dark-mode .schedule .btn {
+    background-color: #444;
+    color: #f7f5f2;
+}
+
+.dark-mode .schedule .btn:hover {
+    background-color: #222;
+}
+
+.dark-mode .schedule-content li {
+    background-color: #444;
+    color: #f7f5f2;
+    border-left-color: #444;
+}
+
+.dark-mode .schedule-content li:hover {
+    background-color: #555;
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 768px) {
+    header .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 12px;
+    }
+header img{
+width: 125px;
+}
+    .hero {
+        height: 100vh;
+        background: url("https://s3-alpha-sig.figma.com/img/da60/13c4/72fea9683c20c6e146e321e57cb05989?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BxYF15EuCHr1PhaqUGXBsvB~fQVTxfjmMzASpUCKBIQaxZ9WIDplVCtfNwbCWdLyQXXGH-ooz4N9rN-9oPqf~HU8yqL-t~7sbfbrjDe25cFMcIJdselTkWjMMOhfVxcxetv-N~S2FVCB~FoOsDO1whx4VuX90es5rUQemm0in8zhXil8hONFDKYP8XhHM~3Rg57IbbaoLongJ5C4rXpdFeh0WAS8vWpR6twYHtBDp3-qeMF97Tf3xmntg6jK5kLelOVt64NQmYI-D3Wl0NbbZBvC43l1AHN8i-QnvOSoSmw3rrxyYQr7T7Z5jTaCcQEfhWlscAVhJtvgdJTP~-WqDA__");
+        background-size: cover;
+        /* margin-top: 10px; */
+    }
+
+    .hero-content .hero-left h1{
+        font-size: 55px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+        }
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content .hero-left, .hero-content .hero-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .icons {
+        flex-direction: row;
+        margin:auto
+    }
+
+
+    .slider-container {
+        width: 100%;
+        height: fit-content;
+    }
+    .speaker-card{
+        height: fit-content;
+    }
+
+    .schedule {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media(max-width:514px) {
+    header .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: row;
+        gap: 5px;
+        font-size: 8px;
+    }
+header img{
+width: 125px;
+}
+    .hero {
+        height: 100vh;
+        background: url("https://s3-alpha-sig.figma.com/img/da60/13c4/72fea9683c20c6e146e321e57cb05989?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BxYF15EuCHr1PhaqUGXBsvB~fQVTxfjmMzASpUCKBIQaxZ9WIDplVCtfNwbCWdLyQXXGH-ooz4N9rN-9oPqf~HU8yqL-t~7sbfbrjDe25cFMcIJdselTkWjMMOhfVxcxetv-N~S2FVCB~FoOsDO1whx4VuX90es5rUQemm0in8zhXil8hONFDKYP8XhHM~3Rg57IbbaoLongJ5C4rXpdFeh0WAS8vWpR6twYHtBDp3-qeMF97Tf3xmntg6jK5kLelOVt64NQmYI-D3Wl0NbbZBvC43l1AHN8i-QnvOSoSmw3rrxyYQr7T7Z5jTaCcQEfhWlscAVhJtvgdJTP~-WqDA__");
+        background-size: cover;
+        /* margin-top: 10px; */
+        
+    }
+    .hero-content .hero-left h1{
+        font-size: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(227, 227, 57);
+        margin-top: auto;
+
+        }
+}
+@media(max-width:400px) {
+    header {
+        background-color: #222;
+     
+        /* width: 110vw; */
+    }
+    header .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    header ul {
+        flex-direction: row;
+        gap: 3px;
+        font-size: 5px;
+    }
+header img{
+width: 125px;
+}
+    .hero {
+        /* width: 110vw; */
+        height: 140vh;
+        background: url("https://s3-alpha-sig.figma.com/img/da60/13c4/72fea9683c20c6e146e321e57cb05989?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BxYF15EuCHr1PhaqUGXBsvB~fQVTxfjmMzASpUCKBIQaxZ9WIDplVCtfNwbCWdLyQXXGH-ooz4N9rN-9oPqf~HU8yqL-t~7sbfbrjDe25cFMcIJdselTkWjMMOhfVxcxetv-N~S2FVCB~FoOsDO1whx4VuX90es5rUQemm0in8zhXil8hONFDKYP8XhHM~3Rg57IbbaoLongJ5C4rXpdFeh0WAS8vWpR6twYHtBDp3-qeMF97Tf3xmntg6jK5kLelOVt64NQmYI-D3Wl0NbbZBvC43l1AHN8i-QnvOSoSmw3rrxyYQr7T7Z5jTaCcQEfhWlscAVhJtvgdJTP~-WqDA__");
+        background-size: cover;
+        background-repeat: repeat-x;
+        /* margin-top: 10px; */
+        
+    }
+   
+    .hero-content .hero-left h1{
+        font-size: 25px;
+   
+        margin-top: -2vh;
+        
+        }
+        .theme-toggler input {
+            display: none;
+        }
+        .theme-toggler {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 14px;
+            margin-left: 4px;
+        }
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: 0.4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: -1px;
+            bottom: -1px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(37px);
+        }
+        
+}
